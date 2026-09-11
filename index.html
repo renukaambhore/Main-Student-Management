@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Student Management System</h1>
+        </div>
+
+
+        <!-- TABS -->
+
+        <div class="tabs">
+
+            <button class="tab-button active"
+                    onclick="openTab('createTab', this)">
+                Create
+            </button>
+
+            <button class="tab-button"
+                    onclick="openTab('readTab', this)">
+                Read
+            </button>
+
+            <button class="tab-button"
+                    onclick="openTab('updateTab', this)">
+                Update
+            </button>
+
+            <button class="tab-button"
+                    onclick="openTab('deleteTab', this)">
+                Delete
+            </button>
+
+        </div>
+
+
+        <!-- CREATE TAB -->
+
+        <div id="createTab" class="tab-content active">
+
+            <label>Student Name</label>
+
+            <input
+                type="text"
+                id="createName"
+                placeholder="Enter Student Name"
+            >
+
+
+            <label>Course</label>
+
+            <input
+                type="text"
+                id="createCourse"
+                placeholder="Enter Course"
+            >
+
+
+            <label>Marks</label>
+
+            <input
+                type="number"
+                id="createMarks"
+                placeholder="Enter Marks"
+            >
+
+
+            <button
+                class="pink-button"
+                onclick="createStudent()">
+                Create Student
+            </button>
+
+
+            <label class="result-label">Result</label>
+
+            <textarea
+                id="createResult"
+                readonly>
+            </textarea>
+
+        </div>
+
+
+        <!-- READ TAB -->
+
+        <div id="readTab" class="tab-content">
+
+            <button
+                class="pink-button"
+                onclick="getStudents()">
+                Show All Students
+            </button>
+
+
+            <label class="result-label">Students</label>
+
+            <textarea
+                id="readResult"
+                rows="12"
+                readonly>
+            </textarea>
+
+        </div>
+
+
+        <!-- UPDATE TAB -->
+
+        <div id="updateTab" class="tab-content">
+
+            <label>Student ID</label>
+
+            <input
+                type="number"
+                id="updateId"
+            >
+
+
+            <label>New Name</label>
+
+            <input
+                type="text"
+                id="updateName"
+            >
+
+
+            <label>New Course</label>
+
+            <input
+                type="text"
+                id="updateCourse"
+            >
+
+
+            <label>New Marks</label>
+
+            <input
+                type="number"
+                id="updateMarks"
+            >
+
+
+            <button
+                class="pink-button"
+                onclick="updateStudent()">
+                Update Student ✏️
+            </button>
+
+
+            <label class="result-label">Result</label>
+
+            <textarea
+                id="updateResult"
+                readonly>
+            </textarea>
+
+        </div>
+
+
+        <!-- DELETE TAB -->
+
+        <div id="deleteTab" class="tab-content">
+
+            <label>Student ID</label>
+
+            <input
+                type="number"
+                id="deleteId"
+            >
+
+
+            <button
+                class="delete-button"
+                onclick="deleteStudent()">
+                Delete Student
+            </button>
+
+
+            <label class="result-label">Result</label>
+
+            <textarea
+                id="deleteResult"
+                readonly>
+            </textarea>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
